@@ -16,7 +16,7 @@ public class ExchangeRateComponent {
 
     public List<ExchangeRate> getExchangeRates(){
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<ExchangeRate[]> response = restTemplate.getForEntity("https://api.hnb.hr/tecajn-eur/v3", ExchangeRate[].class);
+        ResponseEntity<ExchangeRate[]> response = restTemplate.getForEntity( EXCHANGE_RATE_URL, ExchangeRate[].class);
         ExchangeRate[] exchangeRates = response.getBody();
         System.out.println(Arrays.toString(exchangeRates));
         return null;

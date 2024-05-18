@@ -5,5 +5,5 @@ import java.math.BigDecimal;
 public interface CurrencyConverterService {
 
 
-    public BigDecimal converter(CurrencyConverter currencyConverter);
+    public BigDecimal convert(CurrencyConvertRequest currencyConvertRequest);
 }

@@ -16,8 +16,8 @@ public class CurrencyConverterController {
     private final CurrencyConverterService currencyConverterService;
 
     @GetMapping
-    public ResponseEntity<BigDecimal> currencyConverter(@RequestBody CurrencyConverter currencyConverter){
-        BigDecimal converter = currencyConverterService.converter(currencyConverter);
+    public ResponseEntity<BigDecimal> currencyConverter(@RequestBody CurrencyConvertRequest currencyConvertRequest){
+        BigDecimal converter = currencyConverterService.convert(currencyConvertRequest);
         return new ResponseEntity<>(converter, HttpStatus.OK);
     }
 }

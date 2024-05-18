@@ -9,7 +9,7 @@ public class CurrencyConverterServiceImpl implements CurrencyConverterService {
 
 
     @Override
-    public BigDecimal converter(CurrencyConverter currencyConverter) {
+    public BigDecimal convert(CurrencyConvertRequest currencyConvertRequest) {
         return null;
     }
 }

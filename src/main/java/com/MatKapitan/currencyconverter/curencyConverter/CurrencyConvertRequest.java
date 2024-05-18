@@ -7,9 +7,10 @@ import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
-public class CurrencyConverter {
+public class CurrencyConvertRequest {
 
-    private String desiredCurrency;
-    private String currentCurrency;
-    private BigDecimal amount;
+
+    private ECurrency targetCurrency;
+    private ECurrency sourceCurrency;
+    private BigDecimal sourceAmount;
 }
