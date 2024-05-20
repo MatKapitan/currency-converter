@@ -4,8 +4,10 @@ import com.MatKapitan.currencyconverter.exchangeRate.ExchangeRateComponent;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling
 public class CurrencyConverterApplication implements CommandLineRunner {
 
 	private final ExchangeRateComponent exchangeRateComponent;
@@ -20,6 +22,6 @@ public class CurrencyConverterApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		exchangeRateComponent.getExchangeRates();
+//		exchangeRateComponent.getExchangeRates();
 	}
 }
