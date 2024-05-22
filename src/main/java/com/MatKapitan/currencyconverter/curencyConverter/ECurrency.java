@@ -13,5 +13,6 @@ public enum ECurrency {
     GBP,
     USD,
     BAM,
-    PLN
+    PLN,
+    EUR
 }
