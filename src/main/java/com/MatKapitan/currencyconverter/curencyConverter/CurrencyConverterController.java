@@ -29,5 +29,10 @@ public class CurrencyConverterController {
         BigDecimal result = currencyConverterService.convert(currency.getSourceCurrency(), currency.getSourceAmount(), currency.getTargetCurrency());
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
+
+    @GetMapping("/test")
+    public void test(){
+        currencyConverterService.test();
+    }
 }
 

@@ -24,14 +24,25 @@ public class CurrencyConverterServiceImpl implements CurrencyConverterService {
         return null;
     }
 
-    private BigDecimal convertToEuro(BigDecimal sourceAmount){
+    private BigDecimal convertToEuro(BigDecimal sourceAmount, ECurrency sourceCurrency){
         //to euro
-        return null;
+        String exchangeRate = exchangeRateRepository.getExchangeRate(sourceCurrency.toString());
+        BigDecimal bigDecimal = new BigDecimal(exchangeRate);
+        return sourceAmount.multiply(bigDecimal);
     }
 
     private BigDecimal convertToTarget(BigDecimal sourceAmount, ECurrency targetCurrency){
         //to target
-        return null;
+        String exchangeRate = exchangeRateRepository.getExchangeRate(targetCurrency.toString());
+        BigDecimal bigDecimal = new BigDecimal(exchangeRate);
+        return sourceAmount.multiply(bigDecimal);
     }
 
+    //TODO remove when no longer needed
+    @Override
+    public void test() {
+        String s = exchangeRateRepository.getExchangeRate(ECurrency.DKK.toString());
+        System.out.println(s);
+        ECurrency eur = ECurrency.EUR;
+    }
 }
