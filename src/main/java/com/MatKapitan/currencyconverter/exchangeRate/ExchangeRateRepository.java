@@ -11,4 +11,7 @@ public interface ExchangeRateRepository extends JpaRepository<ExchangeRate, Long
             WHERE VALUTA = ?;
             """, nativeQuery = true)
     String getExchangeRate(String currency);
+
+
+
 }
