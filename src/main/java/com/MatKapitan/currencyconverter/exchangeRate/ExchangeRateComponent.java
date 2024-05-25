@@ -45,10 +45,10 @@ public class ExchangeRateComponent {
     }
 
 //     for testing purpose
-        @Scheduled(fixedRate = 10000, initialDelay = 30000)
-    public void testing() {
-        this.onSchedule();
-    }
+//        @Scheduled(fixedRate = 10000, initialDelay = 30000)
+//    public void testing() {
+//        this.onSchedule();
+//    }
 
     private List<ExchangeRate> getExchangeRates(){
         RestTemplate restTemplate = new RestTemplate();

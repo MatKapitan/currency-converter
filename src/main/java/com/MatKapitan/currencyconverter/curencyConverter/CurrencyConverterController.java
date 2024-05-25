@@ -16,7 +16,7 @@ public class CurrencyConverterController {
 
 
 
-    @GetMapping
+    @GetMapping("/")
     public ResponseEntity<BigDecimal> currencyConverter(@RequestParam(name = "sourceCurrency") ECurrency sourceCurrency,
                                                         @RequestParam(name = "sourceAmount") BigDecimal sourceAmount,
                                                         @RequestParam(name = "targetCurrency",defaultValue = "EUR", required = false) ECurrency targetCurrency){
