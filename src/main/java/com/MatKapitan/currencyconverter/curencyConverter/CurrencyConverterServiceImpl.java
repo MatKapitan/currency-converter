@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.EnumSet;
 
 @Service
 @AllArgsConstructor
@@ -41,6 +42,10 @@ public class CurrencyConverterServiceImpl implements CurrencyConverterService {
         String exchangeRate = exchangeRateRepository.getExchangeRate(targetCurrency.toString());
         BigDecimal bigDecimal = new BigDecimal(exchangeRate.replace(",","."));
         return sourceAmount.multiply(bigDecimal);
+    }
+
+    public EnumSet<ECurrency> getAllCurrencies() {
+        return EnumSet.allOf(ECurrency.class);
     }
 
     //TODO remove when no longer needed
