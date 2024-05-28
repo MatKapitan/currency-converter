@@ -8,20 +8,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class CurrencyConverterApplication implements CommandLineRunner {
-
-	private final ExchangeRateComponent exchangeRateComponent;
-
-	public CurrencyConverterApplication(ExchangeRateComponent exchangeRateComponent) {
-		this.exchangeRateComponent = exchangeRateComponent;
-	}
+public class CurrencyConverterApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(CurrencyConverterApplication.class, args);
-	}
-
-	@Override
-	public void run(String... args) throws Exception {
-//		exchangeRateComponent.getExchangeRates();
 	}
 }
