@@ -10,6 +10,4 @@ public interface CurrencyConverterService {
 
     public EnumSet<ECurrency> getAllCurrencies();
 
-    public void test();
-
 }

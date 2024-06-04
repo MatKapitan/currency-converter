@@ -37,9 +37,9 @@ public class CurrencyConverterController {
         return new ResponseEntity<>(allCurrency, HttpStatus.OK);
     }
 
-    @GetMapping("/test")
-    public void test(){
-        currencyConverterService.test();
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<String> BadRequest(IllegalArgumentException ex) {
+        return new ResponseEntity<>("Currency not supported", HttpStatus.BAD_REQUEST);
     }
 }
 
